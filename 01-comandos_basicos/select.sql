@@ -1,3 +1,8 @@
+-- SINTAXE #########################################################################
+select coluna_1, coluna_2, coluna_3
+from schema_1.tabela_1
+
+
 -- Liste os e-mails dos clientes da tabela sales.customers
 SELECT email
 FROM sales.customers
