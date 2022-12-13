@@ -1,0 +1,30 @@
+-- TIPOS ###########################################################################
+-- +
+-- -
+-- *
+-- /
+-- ^
+-- %
+-- || --> não é um operador aritmético
+
+
+-- Crie uma coluna contendo a idade do cliente da tabela sales.customers
+SELECT  email,
+        birth_date,
+        (current_date - birth_date) / 365 AS age
+FROM sales.customers
+
+
+-- Liste os 10 clientes mais novos da tabela customers
+SELECT  email,
+        birth_date,
+        (current_date - birth_date) / 365 AS age
+FROM sales.customers
+ORDER BY age
+LIMIT 10
+
+
+-- Crie a coluna "nome_completo" contendo o nome completo do cliente
+SELECT
+	first_name || ' '  || last_name as nome_completo
+FROM sales.customers
