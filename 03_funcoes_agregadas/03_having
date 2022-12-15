@@ -1,0 +1,8 @@
+-- (Exemplo 1) seleção com filtro no HAVING
+-- Calcule o nº de clientes por estado filtrando apenas estados acima de 100 clientes
+SELECT
+    state,
+    COUNT(*)
+FROM sales.customers
+GROUP BY state
+HAVING COUNT(*) > 100
