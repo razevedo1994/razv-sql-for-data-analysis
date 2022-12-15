@@ -1,0 +1,20 @@
+-- (Exemplo 1) Contagem agrupada de uma coluna
+-- Calcule o nº de clientes da tabela customers por estado
+SELECT state, COUNT(*)
+FROM sales.customers
+GROUP BY state
+
+
+-- (Exemplo 2) Contagem agrupada de várias colunas
+-- Calcule o nº de clientes por estado e status profissional
+SELECT state, professional_status, COUNT(*) as contagem
+FROM sales.customers
+GROUP BY state, professional_status
+ORDER BY state, contagem DESC
+
+
+-- (Exemplo 3) Seleção de valores distintos
+-- Selecione os estados distintos na tabela customers utilizando o group by
+SELECT state
+FROM sales.customers
+GROUP BY state
