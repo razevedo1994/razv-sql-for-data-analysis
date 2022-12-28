@@ -1,0 +1,13 @@
+-- SINTAXE #########################################################################
+select t1.coluna_1, t1.coluna_1, t2.coluna_1, t2.coluna_2
+from schema.tabela_1 as t1
+ALGUM join schema.tabela_2 as t2 on condição_de_join
+
+
+-- EXEMPLOS ########################################################################
+
+-- (Exemplo 1) Utilize o LEFT JOIN para fazer join entre as tabelas
+-- temp_tables.tabela_1 e temp_tables.tabela_2
+SELECT t1.cpf, t1.name, t2.state
+FROM temp_tables.tabela_1 AS t1
+LEFT JOIN temp_tables.tabela_2 AS t2 ON t1.cpf = t2.cpf
